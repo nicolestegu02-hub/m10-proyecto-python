@@ -101,9 +101,6 @@ pdf = FPDF()
 pdf.set_auto_page_break(auto=True, margin=15)
 pdf.add_page()
 
-# IMPRIMIR DOCUMENTO PDF
-pdf.output("reporte_ventas.pdf")
- 
 # Agregar titulo al documento PDF
  
 pdf.set_font("Arial", style="B", size=16)
@@ -148,6 +145,7 @@ pdf.ln(10)
  
  
  
- 
 # IMPRIMIR DOCUMENTO PDF
 pdf.output("reporte_ventas.pdf")
+
+print()
