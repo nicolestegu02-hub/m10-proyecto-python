@@ -8,7 +8,5 @@ Este proyecto consiste en...
 **TIPO DE IMAGENES SOPORTADAS POR LA LIBRERIA**
 
 1. jpg
-
 2. png
-
 3. gif
