@@ -4,7 +4,7 @@ from thefuzz import fuzz, process
 
 
 #definir el directorio de trabajo en el cual se encuentran los archivos.
-directorio = r"D:\Respaldo Asus 29072025\Documentos\Curso analisis de datos\Modulo 9\proyecto\proyecto"
+directorio = r"D:\Respaldo Asus 29072025\Documentos\Curso analisis de datos\Modulo 9\m10-proyecto-python"
 
 os.chdir(directorio)
 
@@ -134,8 +134,20 @@ dibujar_tabla("Monto Vendido por empresa", ventas_por_empresa, "empresa_corregid
 # llamar función para ventas por vendedor
 dibujar_tabla("Monto Vendido por Vendedor", ventas_por_vendedor, "vendedor")
  
+# agregar gráficos al reporte
+pdf.add_page()
+pdf.set_font("Arial", size=14, style="B")
+pdf.cell(200, 10, "Gráfico: Ventas por empresa", ln=True, align="C")
+pdf.image("Ventas_por_empresa.png", x=25, w=150)
+ 
+pdf.ln(10)
+ 
+pdf.cell(200, 10, "Gráfico: Ventas por vendedor", ln=True, align="C")
+pdf.image("Ventas_por_vendedor.png", x=25, w=150)
+pdf.ln(10)
+ 
+ 
  
  
 # IMPRIMIR DOCUMENTO PDF
 pdf.output("reporte_ventas.pdf")
- 
